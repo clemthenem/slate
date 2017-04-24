@@ -74,8 +74,9 @@ html, body {
   // This is the logo at the top of the ToC
   .logo {
     display: block;
-    max-width: 100%;
+    max-width: 50%;
     margin-bottom: $logo-margin;
+    margin: -10px auto -20px auto;
   }
 
   &>.search {
@@ -87,6 +88,7 @@ html, body {
       border-color: $search-box-border-color;
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
+      font-weight: 600;
       margin: $nav-v-padding $nav-padding;
       width: $nav-width - 30;
       outline: none;
@@ -134,6 +136,15 @@ html, body {
   }
 
 
+  .tocify-item>a, .toc-footer li {
+    padding: 0 $nav-padding 0 $nav-padding;
+    display: block;
+    font-weight: 600;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
   // The Table of Contents is composed of multiple nested
   // unordered lists.  These styles remove the default
   // styling of an unordered list because it is ugly.
@@ -166,7 +177,20 @@ html, body {
   .toc-list-h2 {
     display: none;
     background-color: $nav-subitem-bg;
+    font-weight: 600;
+
+    .tocify-item>a {
+      padding-left: $nav-padding + $nav-indent;
+      font-size: 12px;
+    }
     font-weight: 500;
+  }
+
+    .tocify-focus {
+      box-shadow: 0px 1px 0px $nav-active-shadow;
+      background-color: $nav-subitem-bg;
+      color: $nav-active-text;
+    }
   }
 
   .toc-h2 {
@@ -346,14 +370,15 @@ html, body {
 
   h1 {
     @extend %header-font;
-    font-size: 25px;
-    padding-top: 0.5em;
+    font-size: 30px;
+    padding-top: 1em;
     padding-bottom: 0.5em;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #ddd;
     border-bottom: 1px solid #ccc;
-    background-color: #fdfdfd;
+    //background-color: #fdfdfd;
+    background-image: linear-gradient(to bottom, #fff, $main-bg);
   }
 
   h1:first-child, div:first-child + h1 {
@@ -515,6 +540,7 @@ html, body {
     background-color: $code-bg;
     color: #fff;
 
+    //padding: 2em $main-padding;
     margin: 0;
     width: $examples-width;
 
@@ -522,6 +548,7 @@ html, body {
     clear:right;
 
     box-sizing: border-box;
+    //text-shadow: 0px 1px 2px rgba(0,0,0,0.4);
 
     @extend %right-col;
 
@@ -544,8 +571,13 @@ html, body {
   blockquote {
     &>p {
       background-color: $code-annotation-bg;
-      padding: $code-annotation-padding 2em;
-      color: #eee;
+      //padding: $code-annotation-padding 2em;
+      //color: #eee;
+      border-radius: 5px;
+      padding: $code-annotation-padding;
+      color: #ccc;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #404040;
     }
   }
 }
