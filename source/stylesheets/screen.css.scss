@@ -381,13 +381,21 @@ html, body {
 
   h2 {
     @extend %header-font;
-    font-size: 20px;
-    margin-top: 4em;
+    font-size: 27px;
+    font-weight: 600;
     margin-bottom: 0;
-    border-top: 1px solid #ccc;
-    padding-top: 1.2em;
-    padding-bottom: 1.2em;
-    background-image: linear-gradient(to bottom, rgba(#fff, 0.4), rgba(#fff, 0));
+    padding-top: 1em;
+    padding-bottom: 0.3em;
+  }
+
+  h3 {
+    @extend %header-font;
+    font-size: 18px;
+    color: #444;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 
   // h2s right after h1s should bump right up
@@ -397,15 +405,51 @@ html, body {
     border-top: none;
   }
 
-  h3, h4, h5, h6 {
+  h4, h5 {
     @extend %header-font;
     font-size: 15px;
     margin-top: 2.5em;
     margin-bottom: 0.8em;
   }
 
-  h4, h5, h6 {
+  h4, h5 {
     font-size: 10px;
+  }
+
+  h6 {
+    @extend %header-font;
+    margin-top: .3em;
+    margin-bottom: 2em;
+    font-size: 15px;
+    font-weight: 300;
+
+    verb {
+      padding: 4px 12px;
+      border-radius: 15px;
+      margin-right: 8px;
+      font-weight: 600;
+      font-size: 13px;
+
+      &.get {
+        background-color: #6fc2ff;
+        color: #222;
+      }
+
+      &.post {
+        background-color: #4fe187;
+        color: #222;
+      }
+
+      &.delete {
+        background-color: #f18b7f;
+        color: #222;
+      }
+
+      &.put {
+        background-color: #cccccc;
+        color: #222;
+      }
+    }
   }
 
   hr {
@@ -610,7 +654,7 @@ html, body {
   }
 
   .tocify-wrapper .lang-selector {
-    display: block;
+    display: none;
   }
 
   .page-wrapper .lang-selector {
