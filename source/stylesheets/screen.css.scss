@@ -47,12 +47,12 @@ html, body {
 }
 
 @mixin embossed-bg {
-  background:
-    linear-gradient(to bottom, rgba(#000, 0.2), rgba(#000, 0) 8px),
-    linear-gradient(to top, rgba(#000, 0.2), rgba(#000, 0) 8px),
-    linear-gradient(to bottom, rgba($nav-embossed-border-top, 1), rgba($nav-embossed-border-top, 0) 1.5px),
-    linear-gradient(to top, rgba($nav-embossed-border-bottom, 1), rgba($nav-embossed-border-bottom, 0) 1.5px),
-    $nav-subitem-bg;
+  //background:
+  //  linear-gradient(to bottom, rgba(#000, 0.2), rgba(#000, 0) 8px),
+  //  linear-gradient(to top, rgba(#000, 0.2), rgba(#000, 0) 8px),
+  //  linear-gradient(to bottom, rgba($nav-embossed-border-top, 1), rgba($nav-embossed-border-top, 0) 1.5px),
+  //  linear-gradient(to top, rgba($nav-embossed-border-bottom, 1), rgba($nav-embossed-border-bottom, 0) 1.5px),
+  //  $nav-subitem-bg;
 }
 
 .tocify-wrapper {
@@ -82,7 +82,8 @@ html, body {
   // This is the logo at the top of the ToC
   &>img {
     display: block;
-    max-width: 100%;
+    max-width: 50%;
+    margin: -10px auto -20px auto;
   }
 
   &>.search {
@@ -94,6 +95,7 @@ html, body {
       border-color: $search-box-border-color;
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
+      font-weight: 600;
       margin: $nav-v-padding $nav-padding;
       width: $nav-width - 30;
       outline: none;
@@ -149,6 +151,7 @@ html, body {
   .tocify-item>a, .toc-footer li {
     padding: 0 $nav-padding 0 $nav-padding;
     display: block;
+    font-weight: 600;
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -183,10 +186,17 @@ html, body {
   .tocify-subheader {
     display: none; // tocify will override this when needed
     background-color: $nav-subitem-bg;
-    font-weight: 500;
+    font-weight: 600;
+
     .tocify-item>a {
       padding-left: $nav-padding + $nav-indent;
       font-size: 12px;
+    }
+
+    .tocify-focus {
+      box-shadow: 0px 1px 0px $nav-active-shadow;
+      background-color: $nav-subitem-bg;
+      color: $nav-active-text;
     }
 
     // for embossed look:
@@ -356,13 +366,12 @@ html, body {
   h1 {
     @extend %header-font;
     font-size: 30px;
-    padding-top: 0.5em;
+    padding-top: 1em;
     padding-bottom: 0.5em;
-    border-bottom: 1px solid #ccc;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
     border-top: 1px solid #ddd;
-    background-image: linear-gradient(to bottom, #fff, #f9f9f9);
+    background-image: linear-gradient(to bottom, #fff, $main-bg);
   }
 
   h1:first-child, div:first-child + h1 {
