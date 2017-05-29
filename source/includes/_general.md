@@ -39,6 +39,7 @@ FR-IDF | Île-de-France | region
 ## Gender code
 
 Tutory follows the vCard4 standard as it has the most up to date, modern, and inclusive notion of "gender".
+
 * F = female,
 * M = male,
 * O = other,
