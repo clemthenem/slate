@@ -6,7 +6,7 @@ Account verifications are used to ensure integrity of a user.
 
 There are several types of verification available to you:
 
-* __Phone Verification__
+* __Phone Verification__:  `phone`
 
 Verify the current phone number of a user by sending him a text message.
 
@@ -17,7 +17,7 @@ Number of attempts before refreshing token | 3 times
 Token lifetime before expiring | 20 minutes
 Lifetime | Until phone changes
 
-* __Email Verification__
+* __Email Verification__ : `email`
 
 Verify the current email of a user by sending him a verification email.
 

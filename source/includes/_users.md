@@ -21,7 +21,7 @@ This endpoint can be used to retrieve a list of users. With this endpoint it is 
 * Specify a search criteria for users
 * Specify the amount of users to retrieve per page and the page number
 
-<aside class="warning">
+<aside class="notice">
 User needs to be granted the <code>users.index</code> role to call this endpoint.
 </aside>
 
@@ -120,9 +120,14 @@ This endpoint can be used to sign-up a new user.
 
 This endpoint can be used to update user details given the user `id`.
 
-<aside class="warning">
+<aside class="notice">
 A user can only update its own account, unless it is granted a <code>users.update</code> role.
 </aside>
+
+### Side effects
+
+* Updating the phone number will require new phone verification.
+* Updating the email will require new email verification.
 
 
 ## Remove a user
@@ -132,6 +137,6 @@ A user can only update its own account, unless it is granted a <code>users.updat
 This endpoint can be used to delete a user account given the user `id`.
 The user's `active` attribute will be set to `false`.
 
-<aside class="warning">
+<aside class="notice">
 A user can only delete its own account, unless it is granted a <code>users.destroy</code> role.
 </aside>
