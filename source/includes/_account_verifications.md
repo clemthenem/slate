@@ -4,7 +4,12 @@ Account verifications are used to ensure integrity of a user.
 
 ### Verification types
 
-There are several types of verification available to you:
+There are several types of verification available.
+Each region of the world may have custom verifications. We introduce here only the worlwide ones.
+
+#### "Token" based
+
+"Token" based verifications include the followings:
 
 * __Phone Verification__:  `phone`
 
@@ -28,12 +33,24 @@ Number of attempts before refreshing token | 5 times
 Token lifetime before expiring | 3 days
 Lifetime | Until email changes
 
+#### "Attachment" based
+
+"Attachment" based verifications include the followings:
+
+* __Identity Verification__ : `identity`
+
+Verify the birthday, first name & last name of a user.
+It requires the user to upload 1 or more documents that will be verified by an administrator.
+
+The verification will expire as soon as a user changes its date of birth, first name or last name.
+
 ### Include
 
 The following resources can be included in the response.
 
 * `verification-type`: Details of the type of verification.
 * `user`: The owner of the verification and all its details.
+* `documents`: The documents attach to the verification, if any.
 
 ### Verification status
 * `created`: The verification has been created and no action has been started.
@@ -216,3 +233,9 @@ This endpoint will expire the given verification if verified or cancel it if pen
 <aside class="notice">
 A user can only remove its account verifications unless it is granted a <code>verifications.destroy</code> role.
 </aside>
+
+
+### "Attachment" based verification
+
+For verifications having documents attached, the documents will be deleted if the verification has just been created.
+On the other cases they will remain and flagged to inactive.

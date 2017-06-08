@@ -425,10 +425,6 @@ html, body {
     margin-bottom: 0.8em;
   }
 
-  h4, h5 {
-    font-size: 10px;
-  }
-
   h6 {
     @extend %header-font;
     margin-top: .3em;
@@ -474,6 +470,13 @@ html, body {
   table {
     margin-bottom: 1em;
     overflow: auto;
+
+    thead {
+      border-top: 1px solid #cccccc;
+      background: rgb(50, 68, 90);
+      color: white;
+    }
+
     th,td {
       text-align: left;
       vertical-align: top;
