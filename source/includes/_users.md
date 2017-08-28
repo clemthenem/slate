@@ -12,7 +12,7 @@ The users in Tutory are managed using different roles.
 
 ## Get all users
 
-###### <verb class="get">GET</verb> /api/v1/users
+###### <verb class="get">GET</verb> /api/v1/__users__
 
 This endpoint can be used to retrieve a list of users. With this endpoint it is possible to:
 
@@ -53,7 +53,7 @@ phone | string | The user's primary phone number. See Phone Number below
 
 ## Get a user
 
-###### <verb class="get">GET</verb> /api/v1/users/:id
+###### <verb class="get">GET</verb> /api/v1/__users/:id__
 
 This endpoint can be used to retrieve user details given the user `id`.
 
@@ -100,7 +100,7 @@ The protected fields of a user are accessible for:
 
 ## Get my details
 
-###### <verb class="get">GET</verb> /api/v1/users/me
+###### <verb class="get">GET</verb> /api/v1/__users/me__
 
 This endpoint can be used to retrieve the user's details.
 
@@ -109,14 +109,41 @@ It has the same parameters and inclusion as the <a href="#get-a-user">Get a user
 
 ## Create a user
 
-###### <verb class="post">POST</verb> /api/v1/users
+###### <verb class="post">POST</verb> /api/v1/__users__
 
-This endpoint can be used to sign-up a new user.
+This endpoint can be used to register a new user.
+
+A confirmation email will be send to the email address specified in the auth0 sign-up. This email might be different then
+the one specified in the parameters of the request. The email parameter is irrelevant to confirm an account, 
+only the email used to sign-up with auth0 matters (primary identity email).
+
+In order to successfuly signup the user will need to confirm the email. The <a href="#account-confirmation"> section will 
+detailed the process to confirm an account</a>.
+
+### Parameters
+
+These parameters are optional but can be specified in the request.
+
+Attributes | Type | Description
+-------- | -----| -----------
+first-name | string | The user's first name
+last-name | string | The user's last name
+birthday | object | The user's date of birth
+age | object | The age range of the user (min and max)
+nationality | string | The user's nationality
+tutor | boolean | `true` if the user is a tutor
+student | boolean | `true` if the user is a student
+avatar | object | The user's profile picture
+currency | string | The currency used by the user
+time-zone | string | The time zone of the user. See <a href="#time-zones">Time Zone</a> below
+locale | string | The preferred language of the user
+email | string | The user's primary email address
+phone | string | The user's primary phone number. See <a href="#phone-number">Phone Number</a> below
 
 
 ## Update a user
 
-###### <verb class="put">PUT</verb> /api/v1/users/:id
+###### <verb class="put">PUT</verb> /api/v1/__users/:id__
 
 This endpoint can be used to update user details given the user `id`.
 
@@ -132,7 +159,7 @@ A user can only update its own account, unless it is granted a <code>users.updat
 
 ## Remove a user
 
-###### <verb class="delete">DELETE</verb> /api/v1/users/:id
+###### <verb class="delete">DELETE</verb> /api/v1/__users/:id__
 
 This endpoint can be used to delete a user account given the user `id`.
 The user's `active` attribute will be set to `false`.

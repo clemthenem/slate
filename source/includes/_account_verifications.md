@@ -63,7 +63,7 @@ The following resources can be included in the response.
 
 ## Get all verifications
 
-###### <verb class="get">GET</verb> /api/v1/account/__verifications__/
+###### <verb class="get">GET</verb> /api/v1/__account/verifications__
 
 This endpoint can be used to retrieve a list of verifications. With this endpoint it is possible to:
 
@@ -95,7 +95,7 @@ A user can only list the verifications of its own account, unless it is granted 
 
 ## Get a verification
 
-###### <verb class="get">GET</verb> /api/v1/account/__verifications/:id__
+###### <verb class="get">GET</verb> /api/v1/__account/verifications/:id__
 
 ### Parameters
 
@@ -120,7 +120,7 @@ A user can only get the verifications of its own account, unless it is granted a
 
 ## Create a verification
 
-###### <verb class="post">POST</verb> /api/v1/account/__verifications__
+###### <verb class="post">POST</verb> /api/v1/__account/verifications__
 
 ### Parameters
 
@@ -145,7 +145,7 @@ Each verification creation will involve a different behavior dependent on the <a
 
 ## Refresh a verification
 
-###### <verb class="put">PUT</verb> /api/v1/account/__verifications/:id__
+###### <verb class="put">PUT</verb> /api/v1/__account/verifications/:id__
 
 You can refresh the token of a verification several times if it was expired or lost.
 The maximum number of refresh token depends on <a href="#verification-types">the type of verifications.</a>
@@ -177,7 +177,7 @@ A user can only refresh its own verifications or its pupil's ones.
 
 ## Validate a verification
 
-###### <verb class="put">PUT</verb> /api/v1/account/__verifications/:id__
+###### <verb class="put">PUT</verb> /api/v1/__account/verifications/:id__
 
 This endpoint allows to end the process of basic verifications. Some verification cannot be done 
 by the user himself and requires an external/admin action (identity verification etc.).
@@ -206,7 +206,7 @@ Some verification do not require authentication (eg: email verification)
 
 ## Update a verification
 
-###### <verb class="put">PUT</verb> /api/v1/account/__verifications/:id__
+###### <verb class="put">PUT</verb> /api/v1/__account/verifications/:id__
 
 ### Parameters
 
@@ -226,7 +226,7 @@ A user can only update a verification if it is granted a <code>verifications.upd
 
 ## Remove a verification
 
-###### <verb class="delete">DELETE</verb> /api/v1/account/__verifications/:id__
+###### <verb class="delete">DELETE</verb> /api/v1/__account/verifications/:id__
 
 This endpoint will expire the given verification if verified or cancel it if pending/created.
 

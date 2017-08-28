@@ -6,7 +6,7 @@ Each identity is uniquely identified by an auth0_id provided by auth0.
 
 ## Get all account identities
 
-###### <verb class="get">GET</verb> /api/v1/users/:id/identities
+###### <verb class="get">GET</verb> /api/v1/__users/:id/identities__
 
 This endpoint can be used to retrieve a list of user identities. With this endpoint it is possible to:
 
@@ -29,14 +29,14 @@ updated-at | date | The last time the identity has been updated
 
 ## Get an identity
 
-###### <verb class="get">GET</verb> /api/v1/account/identities/:id
+###### <verb class="get">GET</verb> /api/v1/__account/identities/:id__
 
 ### Parameters
 
 
 ## Link a user identity
 
-###### <verb class="post">POST</verb> /api/v1/account/identities
+###### <verb class="post">POST</verb> /api/v1/__account/identities__
 
 ### Parameters
 
@@ -47,7 +47,7 @@ link-with | string | yes | The JWT of the secondary account being linked
 
 ## Update an identity
 
-###### <verb class="put">PUT</verb> /api/v1/account/identities/:id
+###### <verb class="put">PUT</verb> /api/v1/__account/identities/:id__
 
 This endpoint can be used to modify the primary account's identity.
 
@@ -59,4 +59,4 @@ primary | boolean | no | `true` if it's the primary identity of the account
 
 ## Remove an identity
 
-###### <verb class="delete">DELETE</verb> /api/v1/account/identities/:id
+###### <verb class="delete">DELETE</verb> /api/v1/__account/identities/:id__

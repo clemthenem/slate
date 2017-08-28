@@ -8,6 +8,7 @@ toc_footers:
 
 includes:
   - users
+  - account_confirmation
   - account_identities
   - account_verifications
   - general
