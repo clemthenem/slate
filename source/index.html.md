@@ -11,6 +11,7 @@ includes:
   - account_confirmation
   - account_identities
   - account_verifications
+  - tutor_profile
   - general
   - errors
 

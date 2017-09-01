@@ -50,6 +50,7 @@ phone | string | The user's primary phone number. See Phone Number below
 ### Include
 * `identities`: All the identities of the user (refer to <a href="#get-all-identities">identities</a>).
 * `roles`: All the roles attach to each user (refer to <a href="#get-all-roles">roles</a>).
+* `tutor-profile`: The tutor profile attach to the user (refer to <a href="#get-a-tutor-profile">tutor profiles</a>).
 
 ## Get a user
 
@@ -96,6 +97,7 @@ The protected fields of a user are accessible for:
 ### Include
 * `identities`: All the identities of the user (refer to <a href="#get-all-identities">identities</a>).
 * `roles`: All the roles of the user (refer to <a href="#get-all-roles">roles</a>).
+* `tutor-profile`: The tutor profile attach to the user (refer to <a href="#get-a-tutor-profile">tutor profiles</a>).
 
 
 ## Get my details

@@ -361,6 +361,7 @@ html, body {
 
   &>ul, &>ol {
     padding-left: $main-padding + 15px;
+    margin-top: 0;
   }
 
   // the div is the tocify hidden div for placeholding stuff
@@ -408,7 +409,7 @@ html, body {
     font-weight: 700;
     margin-bottom: 0;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
   }
 
   // h2s right after h1s should bump right up
