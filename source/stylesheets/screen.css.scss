@@ -372,14 +372,18 @@ html, body {
   h1 {
     @extend %header-font;
     font-size: 30px;
-    padding-top: 1em;
-    padding-bottom: 0.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
-    border-top: 1px solid #ddd;
+    font-weight: 100;
+    border-bottom: 0.2em solid #f8d22c;
+    color: white;
+    border-top: 0.1em solid #2a3a4e;
+    box-sizing: border-box;
+    background-image: linear-gradient(to top, #32445a, #2a3a4e);
     border-bottom: 1px solid #ccc;
     //background-color: #fdfdfd;
-    background-image: linear-gradient(to bottom, #fff, $main-bg);
   }
 
   h1:first-child, div:first-child + h1 {

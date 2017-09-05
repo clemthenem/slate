@@ -12,6 +12,7 @@ includes:
   - account_identities
   - account_verifications
   - tutor_profile
+  - profile_translations
   - general
   - errors
 
