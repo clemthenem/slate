@@ -409,11 +409,11 @@ html, body {
   h3 {
     @extend %header-font;
     font-size: 18px;
-    color: #444;
+    color: #696969;
     font-weight: 700;
     margin-bottom: 0;
     padding-top: 1em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.8em;
   }
 
   // h2s right after h1s should bump right up
@@ -445,22 +445,22 @@ html, body {
       font-size: 13px;
 
       &.get {
-        background-color: #6fc2ff;
+        background-color: #4ae86c;
         color: #222;
       }
 
       &.post {
-        background-color: #4fe187;
+        background-color: #ffb03a;
         color: #222;
       }
 
       &.delete {
-        background-color: #f18b7f;
-        color: #222;
+        background-color: #e42828;
+        color: #fff;
       }
 
       &.put {
-        background-color: #cccccc;
+        background-color: #6fc2ff;
         color: #222;
       }
     }

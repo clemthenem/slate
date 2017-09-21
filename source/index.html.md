@@ -13,6 +13,9 @@ includes:
   - account_verifications
   - tutor_profile
   - profile_translations
+  - competences
+  - price_listings
+  - price_listing_sets
   - general
   - errors
 
