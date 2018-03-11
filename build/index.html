@@ -1,0 +1,2871 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#json-api" class="toc-h2 toc-link" data-title="json-api">JSON API</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-the-auth0-code" class="toc-h2 toc-link" data-title="get-the-auth0-code">Get the auth0 code</a>
+                  </li>
+                  <li>
+                    <a href="#get-the-jwt-token" class="toc-h2 toc-link" data-title="get-the-jwt-token">Get the JWT token</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#users" class="toc-h1 toc-link" data-title="users">Users</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-users" class="toc-h2 toc-link" data-title="get-all-users">Get all users</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-user" class="toc-h2 toc-link" data-title="get-a-user">Get a user</a>
+                  </li>
+                  <li>
+                    <a href="#get-my-details" class="toc-h2 toc-link" data-title="get-my-details">Get my details</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-user" class="toc-h2 toc-link" data-title="create-a-user">Create a user</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-user" class="toc-h2 toc-link" data-title="update-a-user">Update a user</a>
+                  </li>
+                  <li>
+                    <a href="#remove-a-user" class="toc-h2 toc-link" data-title="remove-a-user">Remove a user</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#account-confirmation" class="toc-h1 toc-link" data-title="account-confirmation">Account Confirmation</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#confirm-a-user-account" class="toc-h2 toc-link" data-title="confirm-a-user-account">Confirm a user account</a>
+                  </li>
+                  <li>
+                    <a href="#refresh-confirmation-token" class="toc-h2 toc-link" data-title="refresh-confirmation-token">Refresh confirmation token</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#account-identities" class="toc-h1 toc-link" data-title="account-identities">Account Identities</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-account-identities" class="toc-h2 toc-link" data-title="get-all-account-identities">Get all account identities</a>
+                  </li>
+                  <li>
+                    <a href="#get-an-identity" class="toc-h2 toc-link" data-title="get-an-identity">Get an identity</a>
+                  </li>
+                  <li>
+                    <a href="#link-a-user-identity" class="toc-h2 toc-link" data-title="link-a-user-identity">Link a user identity</a>
+                  </li>
+                  <li>
+                    <a href="#update-an-identity" class="toc-h2 toc-link" data-title="update-an-identity">Update an identity</a>
+                  </li>
+                  <li>
+                    <a href="#remove-an-identity" class="toc-h2 toc-link" data-title="remove-an-identity">Remove an identity</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#account-verifications" class="toc-h1 toc-link" data-title="account-verifications">Account Verifications</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#verification-types" class="toc-h2 toc-link" data-title="verification-types">Verification types</a>
+                  </li>
+                  <li>
+                    <a href="#include" class="toc-h2 toc-link" data-title="include">Include</a>
+                  </li>
+                  <li>
+                    <a href="#verification-status" class="toc-h2 toc-link" data-title="verification-status">Verification status</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-verifications" class="toc-h2 toc-link" data-title="get-all-verifications">Get all verifications</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-verification" class="toc-h2 toc-link" data-title="get-a-verification">Get a verification</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-verification" class="toc-h2 toc-link" data-title="create-a-verification">Create a verification</a>
+                  </li>
+                  <li>
+                    <a href="#refresh-a-verification" class="toc-h2 toc-link" data-title="refresh-a-verification">Refresh a verification</a>
+                  </li>
+                  <li>
+                    <a href="#validate-a-verification" class="toc-h2 toc-link" data-title="validate-a-verification">Validate a verification</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-verification" class="toc-h2 toc-link" data-title="update-a-verification">Update a verification</a>
+                  </li>
+                  <li>
+                    <a href="#remove-a-verification" class="toc-h2 toc-link" data-title="remove-a-verification">Remove a verification</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tutor-profiles" class="toc-h1 toc-link" data-title="tutor-profiles">Tutor Profiles</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#cancellation-policies" class="toc-h2 toc-link" data-title="cancellation-policies">Cancellation policies</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-tutor-profiles" class="toc-h2 toc-link" data-title="get-all-tutor-profiles">Get all tutor profiles</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-tutor-profile" class="toc-h2 toc-link" data-title="get-a-tutor-profile">Get a tutor profile</a>
+                  </li>
+                  <li>
+                    <a href="#get-my-tutor-profile" class="toc-h2 toc-link" data-title="get-my-tutor-profile">Get my tutor profile</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-tutor-profile" class="toc-h2 toc-link" data-title="create-a-tutor-profile">Create a tutor profile</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-tutor-profile" class="toc-h2 toc-link" data-title="update-a-tutor-profile">Update a tutor profile</a>
+                  </li>
+                  <li>
+                    <a href="#remove-a-tutor-profile" class="toc-h2 toc-link" data-title="remove-a-tutor-profile">Remove a tutor profile</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#profile-translations" class="toc-h1 toc-link" data-title="profile-translations">Profile Translations</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-profile-translations" class="toc-h2 toc-link" data-title="get-all-profile-translations">Get all profile translations</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-profile-translation" class="toc-h2 toc-link" data-title="get-a-profile-translation">Get a profile translation</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-profile-translation" class="toc-h2 toc-link" data-title="create-a-profile-translation">Create a profile translation</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-profile-translation" class="toc-h2 toc-link" data-title="update-a-profile-translation">Update a profile translation</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-profile-translation" class="toc-h2 toc-link" data-title="delete-a-profile-translation">Delete a profile translation</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#competences" class="toc-h1 toc-link" data-title="competences">Competences</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#search-competences" class="toc-h2 toc-link" data-title="search-competences">Search competences</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-competence" class="toc-h2 toc-link" data-title="get-a-competence">Get a competence</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-competence" class="toc-h2 toc-link" data-title="create-a-competence">Create a competence</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-competence" class="toc-h2 toc-link" data-title="update-a-competence">Update a competence</a>
+                  </li>
+                  <li>
+                    <a href="#remove-a-competence" class="toc-h2 toc-link" data-title="remove-a-competence">Remove a competence</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#price-listings" class="toc-h1 toc-link" data-title="price-listings">Price Listings</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#price-listings-categories" class="toc-h2 toc-link" data-title="price-listings-categories">Price listings categories</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-price-listings" class="toc-h2 toc-link" data-title="get-all-price-listings">Get all price listings</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-price-listing" class="toc-h2 toc-link" data-title="get-a-price-listing">Get a price listing</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-price-listing" class="toc-h2 toc-link" data-title="create-a-price-listing">Create a price listing</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-price-listing" class="toc-h2 toc-link" data-title="update-a-price-listing">Update a price listing</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-price-listing" class="toc-h2 toc-link" data-title="delete-a-price-listing">Delete a price listing</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#price-listing-sets" class="toc-h1 toc-link" data-title="price-listing-sets">Price Listing Sets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-price-listing-sets" class="toc-h2 toc-link" data-title="get-all-price-listing-sets">Get all price listing sets</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-price-listing-set" class="toc-h2 toc-link" data-title="get-a-price-listing-set">Get a price listing set</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-price-listing-set" class="toc-h2 toc-link" data-title="create-a-price-listing-set">Create a price listing set</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-price-listing-set" class="toc-h2 toc-link" data-title="update-a-price-listing-set">Update a price listing set</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-price-listing-set" class="toc-h2 toc-link" data-title="delete-a-price-listing-set">Delete a price listing set</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#general" class="toc-h1 toc-link" data-title="general">General</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#time-zones" class="toc-h2 toc-link" data-title="time-zones">Time zones</a>
+                  </li>
+                  <li>
+                    <a href="#phone-number" class="toc-h2 toc-link" data-title="phone-number">Phone Number</a>
+                  </li>
+                  <li>
+                    <a href="#country-code" class="toc-h2 toc-link" data-title="country-code">Country code</a>
+                  </li>
+                  <li>
+                    <a href="#gender-code" class="toc-h2 toc-link" data-title="gender-code">Gender code</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Tutory API! </p>
+
+<p>This document describes the Tutory v1 API, which is meant to be used by back-end servers or trusted parties performing administrative tasks. Create a new booking, read user profile and reviews data, and more.</p>
+
+<p>Generally speaking, anything that can be done through the Tutory dashboard (and more) can also be done through this API.</p>
+
+<p>All requests should be send to <code>tutory.com.au</code></p>
+<h2 id='json-api'>JSON API</h2>
+<p>The Tutory API requests and responses are using the JSON API format. </p>
+
+<p>It is a specification for how a client should request that resources be fetched or modified, and how a server should respond to those requests.</p>
+
+<p>JSON API requires use of the JSON API media type <code>application/vnd.api+json</code> for exchanging data.</p>
+<h1 id='authentication'>Authentication</h1>
+<p>Tutory uses Auth0 (https://auth0.com/) to authenticate users.</p>
+
+<p>In order to get a valid <strong>JWT token</strong> (necessary to connect to the platform), you need to get an auth0 <strong>code</strong>.</p>
+
+<p>The code provided by auth0 allows to verify that you have correctly logged in.</p>
+
+<p>Once you&#39;ve logged in on the website you should be redirected and get a <strong>code</strong> in the url.</p>
+<h3 id='get-the-auth0-code'>Get the auth0 code</h3><h4 id='developer-environment-localhost'>Developer environment (localhost)</h4>
+<p><a target="_blank" href="https://tutory.au.auth0.com/login?response_type=code&client=oGWa3mqDY60HfZ2faphy668XQkYj0Kqm&scope=openid%20email">Login here</a>
+ to get your auth0 code.</p>
+
+<blockquote>
+<p>To get a JWT token, use this code:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl --request POST <span class="se">\</span>
+  --url https://tutory.au.auth0.com/oauth/token <span class="se">\</span>
+  --header <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
+  --data <span class="s1">'grant_type=authorization_code&amp;
+          client_id=&lt;CLIENT_ID_ENV&gt;&amp;
+          client_secret=&lt;CLIENT_SECRET_ENV&gt;&amp;
+          code=&lt;YOUR_CODE&gt;&amp;
+          redirect_uri=http://localhost:3000'</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>YOUR_CODE</code> with the code your received when you logged in.</p>
+
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;ACCESS_TOKEN&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id_token"</span><span class="p">:</span><span class="s2">"&lt;JWT_TOKEN&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expires_in"</span><span class="p">:</span><span class="mi">86400</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"token_type"</span><span class="p">:</span><span class="s2">"Bearer"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='get-the-jwt-token'>Get the JWT token</h3><h4 id='developer-environment-localhost-2'>Developer environment (localhost)</h4>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>client_id</td>
+<td>oGWa3mqDY60HfZ2faphy668XQkYj0Kqm</td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>Request the client secret key to a tutory dev.</td>
+</tr>
+</tbody></table>
+<h4 id='uat-environment-test'>UAT environment (test)</h4>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>client_id</td>
+<td>COXnPaljg1djx235QKBbHRFZVOHH4sFy</td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>Request the client secret key to a tutory dev.</td>
+</tr>
+</tbody></table>
+<h4 id='production-environment-live'>Production environment (live)</h4>
+<aside class="notice">
+TODO
+</aside>
+
+<p>You are now ready to communicate with the other endpoints of the Tutory API.</p>
+<h1 id='users'>Users</h1>
+<p>The users in Tutory represent tutors and students.
+Their permissions are managed using <strong>Roles</strong>. </p>
+
+<p>List of endpoints:</p>
+
+<ul>
+<li>GET /api/v1/users</li>
+<li>GET /api/v1/users/me</li>
+<li>GET /api/v1/users/:id</li>
+<li>PUT /api/v1/users/:id</li>
+<li>DELETE /api/v1/users/:id</li>
+<li>POST /api/v1/users/</li>
+</ul>
+<h2 id='get-all-users'>Get all users</h2><h6 id='get-api-v1-users'><verb class="get">GET</verb> /api/v1/<strong>users</strong></h6>
+<p>This endpoint can be used to retrieve a list of users. With this endpoint it is possible to:</p>
+
+<ul>
+<li>Sort the users to be returned</li>
+<li>Select the fields to be returned</li>
+<li>Specify a search criteria for users</li>
+<li>Specify the amount of users to retrieve per page and the page number</li>
+</ul>
+
+<aside class="notice">
+User needs to be granted the <code>users.index</code> role to call this endpoint.
+</aside>
+<h3 id='parameters'>Parameters</h3>
+<p>When a user makes the request, users are returned with the following attributes:</p>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first-name</td>
+<td>string</td>
+<td>The user&#39;s first name</td>
+</tr>
+<tr>
+<td>last-name</td>
+<td>string</td>
+<td>The user&#39;s last name</td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>object</td>
+<td>The user&#39;s date of birth</td>
+</tr>
+<tr>
+<td>nationality</td>
+<td>string</td>
+<td>The user&#39;s nationality</td>
+</tr>
+<tr>
+<td>tutor</td>
+<td>boolean</td>
+<td><code>true</code> if the user is a tutor</td>
+</tr>
+<tr>
+<td>student</td>
+<td>boolean</td>
+<td><code>true</code> if the user is a student</td>
+</tr>
+<tr>
+<td>active</td>
+<td>boolean</td>
+<td><code>false</code> if the user has been deleted</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>object</td>
+<td>The user&#39;s profile picture</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>date</td>
+<td>The date where the user joined Tutory</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>date</td>
+<td>The date where the user joined Tutory</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>The currency used by the user</td>
+</tr>
+<tr>
+<td>time-zone</td>
+<td>string</td>
+<td>The time zone of the user. See <a href="#time-zones">Time Zone</a> below</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>string</td>
+<td>The preferred language of the user</td>
+</tr>
+<tr>
+<td>external-id</td>
+<td>string</td>
+<td>A unique id identifying the user</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>The user&#39;s primary email address</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td>The user&#39;s primary phone number. See Phone Number below</td>
+</tr>
+</tbody></table>
+<h3 id='include'>Include</h3>
+<ul>
+<li><code>identities</code>: All the identities of the user (refer to <a href="#get-all-identities">identities</a>).</li>
+<li><code>roles</code>: All the roles attach to each user (refer to <a href="#get-all-roles">roles</a>).</li>
+<li><code>tutor-profile</code>: The tutor profile attach to the user (refer to <a href="#get-a-tutor-profile">tutor profiles</a>).</li>
+</ul>
+<h2 id='get-a-user'>Get a user</h2><h6 id='get-api-v1-users-id'><verb class="get">GET</verb> /api/v1/<strong>users/:id</strong></h6>
+<p>This endpoint can be used to retrieve user details given the user <code>id</code>.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Private</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first-name</td>
+<td>string</td>
+<td>no</td>
+<td>The user&#39;s first name</td>
+</tr>
+<tr>
+<td>last-name</td>
+<td>string</td>
+<td>yes</td>
+<td>The user&#39;s last name</td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>object</td>
+<td>yes*</td>
+<td>The user&#39;s date of birth</td>
+</tr>
+<tr>
+<td>age</td>
+<td>object</td>
+<td>no</td>
+<td>The age range of the user (min and max)</td>
+</tr>
+<tr>
+<td>nationality</td>
+<td>string</td>
+<td>yes</td>
+<td>The user&#39;s nationality</td>
+</tr>
+<tr>
+<td>tutor</td>
+<td>boolean</td>
+<td>no</td>
+<td><code>true</code> if the user is a tutor</td>
+</tr>
+<tr>
+<td>student</td>
+<td>boolean</td>
+<td>no</td>
+<td><code>true</code> if the user is a student</td>
+</tr>
+<tr>
+<td>active</td>
+<td>boolean</td>
+<td>no</td>
+<td><code>false</code> if the user has been deleted</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>object</td>
+<td>no</td>
+<td>The user&#39;s profile picture</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>date</td>
+<td>no</td>
+<td>The date where the user joined Tutory</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>date</td>
+<td>yes*</td>
+<td>The date where the user joined Tutory</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>no</td>
+<td>The currency used by the user</td>
+</tr>
+<tr>
+<td>time-zone</td>
+<td>string</td>
+<td>no</td>
+<td>The time zone of the user. See <a href="#time-zones">Time Zone</a> below</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>string</td>
+<td>no</td>
+<td>The preferred language of the user</td>
+</tr>
+<tr>
+<td>external-id</td>
+<td>string</td>
+<td>no</td>
+<td>A unique id identifying the user</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>yes*</td>
+<td>The user&#39;s primary email address</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td>yes</td>
+<td>The user&#39;s primary phone number. See Phone Number below</td>
+</tr>
+<tr>
+<td>notes</td>
+<td>string</td>
+<td>yes**</td>
+<td>Notes written about a user</td>
+</tr>
+</tbody></table>
+
+<p>* These fields are only accessible by the owner and admins.</p>
+
+<p>** This field is only accessible by an admin.</p>
+<h3 id='protected-fields'>Protected fields</h3>
+<p>User attributes are not all accessible by default. 
+The protected fields of a user are accessible for:</p>
+
+<ul>
+<li>user granted with a <code>users.show</code> role.</li>
+<li>user viewing its own profile.</li>
+<li>user viewing a booked tutor (booking must be active).</li>
+</ul>
+<h3 id='include-2'>Include</h3>
+<ul>
+<li><code>identities</code>: All the identities of the user (refer to <a href="#get-all-identities">identities</a>).</li>
+<li><code>roles</code>: All the roles of the user (refer to <a href="#get-all-roles">roles</a>).</li>
+<li><code>tutor-profile</code>: The tutor profile attach to the user (refer to <a href="#get-a-tutor-profile">tutor profiles</a>).</li>
+</ul>
+<h2 id='get-my-details'>Get my details</h2><h6 id='get-api-v1-users-me'><verb class="get">GET</verb> /api/v1/<strong>users/me</strong></h6>
+<p>This endpoint can be used to retrieve the user&#39;s details.</p>
+
+<p>It has the same parameters and inclusion as the <a href="#get-a-user">Get a user</a> endpoint.</p>
+<h2 id='create-a-user'>Create a user</h2><h6 id='post-api-v1-users'><verb class="post">POST</verb> /api/v1/<strong>users</strong></h6>
+<p>This endpoint can be used to register a new user.</p>
+
+<p>A confirmation email will be send to the email address specified in the auth0 sign-up. This email might be different then
+the one specified in the parameters of the request. The email parameter is irrelevant to confirm an account, 
+only the email used to sign-up with auth0 matters (primary identity email).</p>
+
+<p>In order to successfuly signup the user will need to confirm the email. The <a href="#account-confirmation"> section will 
+detailed the process to confirm an account</a>.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<p>These parameters are optional but can be specified in the request.</p>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first-name</td>
+<td>string</td>
+<td>The user&#39;s first name</td>
+</tr>
+<tr>
+<td>last-name</td>
+<td>string</td>
+<td>The user&#39;s last name</td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>object</td>
+<td>The user&#39;s date of birth</td>
+</tr>
+<tr>
+<td>age</td>
+<td>object</td>
+<td>The age range of the user (min and max)</td>
+</tr>
+<tr>
+<td>nationality</td>
+<td>string</td>
+<td>The user&#39;s nationality</td>
+</tr>
+<tr>
+<td>tutor</td>
+<td>boolean</td>
+<td><code>true</code> if the user is a tutor</td>
+</tr>
+<tr>
+<td>student</td>
+<td>boolean</td>
+<td><code>true</code> if the user is a student</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>object</td>
+<td>The user&#39;s profile picture</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>The currency used by the user</td>
+</tr>
+<tr>
+<td>time-zone</td>
+<td>string</td>
+<td>The time zone of the user. See <a href="#time-zones">Time Zone</a> below</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>string</td>
+<td>The preferred language of the user</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>The user&#39;s primary email address</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td>The user&#39;s primary phone number. See <a href="#phone-number">Phone Number</a> below</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-user'>Update a user</h2><h6 id='put-api-v1-users-id'><verb class="put">PUT</verb> /api/v1/<strong>users/:id</strong></h6>
+<p>This endpoint can be used to update user details given the user <code>id</code>.</p>
+
+<aside class="notice">
+A user can only update its own account, unless it is granted a <code>users.update</code> role.
+</aside>
+<h3 id='side-effects'>Side effects</h3>
+<ul>
+<li>Updating the phone number will require new phone verification.</li>
+<li>Updating the email will require new email verification.</li>
+</ul>
+<h2 id='remove-a-user'>Remove a user</h2><h6 id='delete-api-v1-users-id'><verb class="delete">DELETE</verb> /api/v1/<strong>users/:id</strong></h6>
+<p>This endpoint can be used to delete a user account given the user <code>id</code>.
+The user&#39;s <code>active</code> attribute will be set to <code>false</code>.</p>
+
+<aside class="notice">
+A user can only delete its own account, unless it is granted a <code>users.destroy</code> role.
+</aside>
+<h1 id='account-confirmation'>Account Confirmation</h1>
+<p>Once a user created its account, he will need to confirm it to ensure the integrity of the platform.</p>
+<h2 id='confirm-a-user-account'>Confirm a user account</h2><h6 id='put-api-v1-account-identities-id'><verb class="put">PUT</verb> /api/v1/<strong>account/identities/:id</strong></h6>
+<p>This endpoint can be used to &quot;activate the account&quot; of a user, confirm its creation. 
+A user can confirm its account by clicking on the link received by email.</p>
+
+<table><thead>
+<tr>
+<th>Description</th>
+<th>Limitation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Token lifetime</td>
+<td>3 days</td>
+</tr>
+</tbody></table>
+<h3 id='parameters'>Parameters</h3>
+<p>All the following parameters are required for the request.</p>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>action</td>
+<td>string</td>
+<td><code>verify</code></td>
+<td>The type of action</td>
+</tr>
+<tr>
+<td>verification-token</td>
+<td>string</td>
+<td>-</td>
+<td>The uniq token used to confirm the account creation.</td>
+</tr>
+</tbody></table>
+<h3 id='errors'>Errors</h3>
+<ul>
+<li><strong>711</strong>: The token provided is invalid.</li>
+<li><strong>712</strong>: The token lifetime has expired, refresh the token.</li>
+</ul>
+<h2 id='refresh-confirmation-token'>Refresh confirmation token</h2><h6 id='put-api-v1-account-identities-id-2'><verb class="put">PUT</verb> /api/v1/<strong>account/identities/:id</strong></h6>
+<p>If the user has lost the confirmation email or its confirmation token expired this endpoint will 
+generate a new token.</p>
+
+<table><thead>
+<tr>
+<th>Description</th>
+<th>Limitation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Number of refresh token or invalid attemps before blocked</td>
+<td>5 times</td>
+</tr>
+<tr>
+<td>Delay between each token refresh</td>
+<td>10 minutes</td>
+</tr>
+</tbody></table>
+<h3 id='parameters-2'>Parameters</h3>
+<p>The following parameter is required for the request.</p>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>action</td>
+<td>string</td>
+<td><code>refresh</code></td>
+</tr>
+</tbody></table>
+<h3 id='errors-2'>Errors</h3>
+<ul>
+<li><strong>713</strong>: There is a delay between each refreshed token.</li>
+<li><strong>714</strong>: The user has requested a new confirmation token too many times.</li>
+<li><strong>715</strong>: The account is already confirmed.</li>
+</ul>
+<h1 id='account-identities'>Account Identities</h1>
+<p>The account identity represents an object uniquely identifying a user.
+A user may have one or many identities (way of connecting to the platform). 
+Each identity is uniquely identified by an auth0_id provided by auth0.</p>
+<h2 id='get-all-account-identities'>Get all account identities</h2><h6 id='get-api-v1-users-id-identities'><verb class="get">GET</verb> /api/v1/<strong>users/:id/identities</strong></h6>
+<p>This endpoint can be used to retrieve a list of user identities. With this endpoint it is possible to:</p>
+
+<ul>
+<li>Sort the user&#39;s identities to be returned</li>
+<li>Select the fields to be returned</li>
+<li>Specify a search criteria for user identities</li>
+<li>Specify the amount of user identities to retrieve per page and the page number</li>
+</ul>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>primary</td>
+<td>boolean</td>
+<td><code>true</code> if it&#39;s the primary identity of the account</td>
+</tr>
+<tr>
+<td>value</td>
+<td>string</td>
+<td>The value of the identity (can be an email, a phone ...)</td>
+</tr>
+<tr>
+<td>auth0-id</td>
+<td>string</td>
+<td>The unique auth0&#39;s id for this user identity</td>
+</tr>
+<tr>
+<td>provider</td>
+<td>string</td>
+<td>The identity&#39;s provider (facebook, google, password-email...)</td>
+</tr>
+<tr>
+<td>verified</td>
+<td>boolean</td>
+<td><code>true</code> if the identity has been verified by auth0</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>date</td>
+<td>The creation date of the identity</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>date</td>
+<td>The last time the identity has been updated</td>
+</tr>
+</tbody></table>
+<h2 id='get-an-identity'>Get an identity</h2><h6 id='get-api-v1-account-identities-id'><verb class="get">GET</verb> /api/v1/<strong>account/identities/:id</strong></h6><h3 id='parameters-2'>Parameters</h3><h2 id='link-a-user-identity'>Link a user identity</h2><h6 id='post-api-v1-account-identities'><verb class="post">POST</verb> /api/v1/<strong>account/identities</strong></h6><h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>link-with</td>
+<td>string</td>
+<td>yes</td>
+<td>The JWT of the secondary account being linked</td>
+</tr>
+</tbody></table>
+<h2 id='update-an-identity'>Update an identity</h2><h6 id='put-api-v1-account-identities-id'><verb class="put">PUT</verb> /api/v1/<strong>account/identities/:id</strong></h6>
+<p>This endpoint can be used to modify the primary account&#39;s identity.</p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>primary</td>
+<td>boolean</td>
+<td>no</td>
+<td><code>true</code> if it&#39;s the primary identity of the account</td>
+</tr>
+</tbody></table>
+<h2 id='remove-an-identity'>Remove an identity</h2><h6 id='delete-api-v1-account-identities-id'><verb class="delete">DELETE</verb> /api/v1/<strong>account/identities/:id</strong></h6><h1 id='account-verifications'>Account Verifications</h1>
+<p>Account verifications are used to ensure integrity of a user.</p>
+<h3 id='verification-types'>Verification types</h3>
+<p>There are several types of verification available.
+Each region of the world may have custom verifications. We introduce here only the worlwide ones.</p>
+<h4 id='quot-token-quot-based'>&quot;Token&quot; based</h4>
+<p>&quot;Token&quot; based verifications include the followings:</p>
+
+<ul>
+<li><strong>Phone Verification</strong>:  <code>phone</code></li>
+</ul>
+
+<p>Verify the current phone number of a user by sending him a text message.</p>
+
+<table><thead>
+<tr>
+<th>Description</th>
+<th>Limitation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Number of refresh token before blocked</td>
+<td>3 times</td>
+</tr>
+<tr>
+<td>Number of attempts before refreshing token</td>
+<td>3 times</td>
+</tr>
+<tr>
+<td>Token lifetime before expiring</td>
+<td>20 minutes</td>
+</tr>
+<tr>
+<td>Lifetime</td>
+<td>Until phone changes</td>
+</tr>
+</tbody></table>
+
+<ul>
+<li><strong>Email Verification</strong> : <code>email</code></li>
+</ul>
+
+<p>Verify the current email of a user by sending him a verification email.</p>
+
+<table><thead>
+<tr>
+<th>Description</th>
+<th>Limitation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Number of refresh token before blocked</td>
+<td>5 times</td>
+</tr>
+<tr>
+<td>Number of attempts before refreshing token</td>
+<td>5 times</td>
+</tr>
+<tr>
+<td>Token lifetime before expiring</td>
+<td>3 days</td>
+</tr>
+<tr>
+<td>Lifetime</td>
+<td>Until email changes</td>
+</tr>
+</tbody></table>
+<h4 id='quot-attachment-quot-based'>&quot;Attachment&quot; based</h4>
+<p>&quot;Attachment&quot; based verifications include the followings:</p>
+
+<ul>
+<li><strong>Identity Verification</strong> : <code>identity</code></li>
+</ul>
+
+<p>Verify the birthday, first name &amp; last name of a user.
+It requires the user to upload 1 or more documents that will be verified by an administrator.</p>
+
+<p>The verification will expire as soon as a user changes its date of birth, first name or last name.</p>
+<h3 id='include'>Include</h3>
+<p>The following resources can be included in the response.</p>
+
+<ul>
+<li><code>verification-type</code>: Details of the type of verification.</li>
+<li><code>user</code>: The owner of the verification and all its details.</li>
+<li><code>documents</code>: The documents attach to the verification, if any.</li>
+</ul>
+<h3 id='verification-status'>Verification status</h3>
+<ul>
+<li><code>created</code>: The verification has been created and no action has been started.</li>
+<li><code>pending</code>: The verification is waiting for an intervention (user or admin).</li>
+<li><code>verified</code>: The verification has been verified and is valid.</li>
+<li><code>canceled</code>: The verification was canceled before being verified.</li>
+<li><code>expired</code>: The verification expired after updating user&#39;s field or an admin action.</li>
+<li><code>blocked</code>: The verification was blocked after too many attempts or by an admin.</li>
+</ul>
+<h2 id='get-all-verifications'>Get all verifications</h2><h6 id='get-api-v1-account-verifications'><verb class="get">GET</verb> /api/v1/<strong>account/verifications</strong></h6>
+<p>This endpoint can be used to retrieve a list of verifications. With this endpoint it is possible to:</p>
+
+<ul>
+<li>Sort the verifications to be returned</li>
+<li>Select the fields to be returned</li>
+<li>Specify a search criteria for verifications</li>
+<li>Specify the amount of verifications to retrieve per page and the page number</li>
+</ul>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Admin</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>no</td>
+<td>The current status of the verification <code>created</code>, <code>pending</code>, <code>verified</code>, <code>expired</code>, <code>canceled</code>, <code>blocked</code></td>
+</tr>
+<tr>
+<td>token-expired-at</td>
+<td>date</td>
+<td>no</td>
+<td>The time where the token is going to expire</td>
+</tr>
+<tr>
+<td>approved-at</td>
+<td>date</td>
+<td>no</td>
+<td>The time where the verification has been approved</td>
+</tr>
+<tr>
+<td>verification-number</td>
+<td>string</td>
+<td>no</td>
+<td>Possible reference of a verification in another system</td>
+</tr>
+<tr>
+<td>attempts</td>
+<td>integer</td>
+<td>no</td>
+<td>The number of time a user has been trying to verify the token</td>
+</tr>
+<tr>
+<td>token-counter</td>
+<td>integer</td>
+<td>no</td>
+<td>The number of  token generation</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>date</td>
+<td>no</td>
+<td>The creation date of the verification</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>date</td>
+<td>no</td>
+<td>The last time the verification has been updated</td>
+</tr>
+<tr>
+<td>locale-key</td>
+<td>string</td>
+<td>no</td>
+<td>The slug type of the verification <code>email</code>, <code>phone</code></td>
+</tr>
+<tr>
+<td>additional-info</td>
+<td>text</td>
+<td>yes</td>
+<td>Extra details regarding a verification.</td>
+</tr>
+<tr>
+<td>method</td>
+<td>string</td>
+<td>yes</td>
+<td>How the verification has been processed <code>automatic</code>, <code>manual</code>...</td>
+</tr>
+<tr>
+<td>approved-by</td>
+<td>integer</td>
+<td>yes</td>
+<td>The user&#39;s ID that approved the verification, if any.</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+A user can only list the verifications of its own account, unless it is granted a <code>verifications.*****</code> role.
+</aside>
+<h2 id='get-a-verification'>Get a verification</h2><h6 id='get-api-v1-account-verifications-id'><verb class="get">GET</verb> /api/v1/<strong>account/verifications/:id</strong></h6><h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Admin</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>no</td>
+<td>The current status of the verification <code>created</code>, <code>pending</code>, <code>verified</code>, <code>expired</code>, <code>canceled</code>, <code>blocked</code></td>
+</tr>
+<tr>
+<td>token-expired-at</td>
+<td>date</td>
+<td>no</td>
+<td>The time where the token is going to expire</td>
+</tr>
+<tr>
+<td>approved-at</td>
+<td>date</td>
+<td>no</td>
+<td>The time where the verification has been approved</td>
+</tr>
+<tr>
+<td>verification-number</td>
+<td>string</td>
+<td>no</td>
+<td>Possible reference of a verification in another system</td>
+</tr>
+<tr>
+<td>attempts</td>
+<td>integer</td>
+<td>no</td>
+<td>The number of time a user has been trying to verify the token</td>
+</tr>
+<tr>
+<td>token-counter</td>
+<td>integer</td>
+<td>no</td>
+<td>The number of  token generation</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>date</td>
+<td>no</td>
+<td>The creation date of the verification</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>date</td>
+<td>no</td>
+<td>The last time the verification has been updated</td>
+</tr>
+<tr>
+<td>locale-key</td>
+<td>string</td>
+<td>no</td>
+<td>The slug type of the verification <code>email</code>, <code>phone</code></td>
+</tr>
+<tr>
+<td>additional-info</td>
+<td>text</td>
+<td>yes</td>
+<td>Extra details regarding a verification.</td>
+</tr>
+<tr>
+<td>method</td>
+<td>string</td>
+<td>yes</td>
+<td>How the verification has been processed <code>automatic</code>, <code>manual</code>...</td>
+</tr>
+<tr>
+<td>approved-by</td>
+<td>integer</td>
+<td>yes</td>
+<td>The user&#39;s ID that approved the verification, if any.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+A user can only get the verifications of its own account, unless it is granted a <code>verifications.show</code> role.
+</aside>
+<h2 id='create-a-verification'>Create a verification</h2><h6 id='post-api-v1-account-verifications'><verb class="post">POST</verb> /api/v1/<strong>account/verifications</strong></h6><h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>verification-type-slug</td>
+<td>string</td>
+<td>yes</td>
+<td>The type of verification you would like to create <a href="#verification-types">find the list here</a>.</td>
+</tr>
+<tr>
+<td>verification-number</td>
+<td>string</td>
+<td>no</td>
+<td>An external id link to this verification</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+A user can only create a verification for its own account, unless it is granted a <code>verifications.create</code> role.
+</aside>
+<h3 id='result'>Result</h3>
+<p>Each verification creation will involve a different behavior dependent on the <a href="#verification-types">verification type</a>.</p>
+<h3 id='errors'>Errors</h3>
+<ul>
+<li><strong>750</strong>: The type of verification is invalid. Make sure you use the correct <a href="#verification-types"> verification type</a>.</li>
+<li><strong>751</strong>: A verification with the current parameters already exists and has been verified.</li>
+<li><strong>752</strong>: A verification with the current parameters already exists and is pending. You cannot create a new one unless you cancel this.</li>
+</ul>
+<h2 id='refresh-a-verification'>Refresh a verification</h2><h6 id='put-api-v1-account-verifications-id'><verb class="put">PUT</verb> /api/v1/<strong>account/verifications/:id</strong></h6>
+<p>You can refresh the token of a verification several times if it was expired or lost.
+The maximum number of refresh token depends on <a href="#verification-types">the type of verifications.</a></p>
+
+<p>After that the verification will be blocked and the user will not be able to create/verify/refresh any verification.</p>
+
+<aside class="warning">
+A user will be blocked if it reaches the maximum number of refresh attempts.
+</aside>
+<h3 id='parameters-required'>Parameters required</h3>
+<p>The following parameters should be included in the request to refresh a token.</p>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>action</td>
+<td>string</td>
+<td><code>refresh</code></td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+A user can only refresh its own verifications or its pupil's ones.
+</aside>
+<h3 id='errors-2'>Errors</h3>
+<ul>
+<li><strong>753</strong>: The verification has been blocked after too many refresh. Contact an administrator.</li>
+<li><strong>754</strong>: There is a delay of 1 minute between each refresh. Wait and try again.</li>
+<li><strong>755</strong>: You have reached the limit of refresh tokens, the account has been blocked and cannot do any operations with verifications.</li>
+<li><strong>757</strong>: The verification cannot be refreshed as it is expired or canceled, create a new one.</li>
+</ul>
+<h2 id='validate-a-verification'>Validate a verification</h2><h6 id='put-api-v1-account-verifications-id-2'><verb class="put">PUT</verb> /api/v1/<strong>account/verifications/:id</strong></h6>
+<p>This endpoint allows to end the process of basic verifications. Some verification cannot be done 
+by the user himself and requires an external/admin action (identity verification etc.).
+The user will have a limited number of attempts for its verification described in each <a href="verification-types">verification type</a>.</p>
+<h3 id='parameters-required-2'>Parameters required</h3>
+<p>The following parameters needs to be included in the request to be successfully verified.</p>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>action</td>
+<td>string</td>
+<td><code>verify</code></td>
+<td>Describe the type of action</td>
+</tr>
+<tr>
+<td>verify-token</td>
+<td>string</td>
+<td><code>&lt;token-sent&gt;</code></td>
+<td>Token generated and sent at the creation/refresh.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+A user can only verify its own verification or its pupil's one.<br/>
+</aside>
+
+<aside class="notice">
+Some verification do not require authentication (eg: email verification)
+</aside>
+<h3 id='errors-3'>Errors</h3>
+<ul>
+<li><strong>756</strong>: You had too many unsuccessful attempts to verify a token. Try to refresh the token.</li>
+</ul>
+<h2 id='update-a-verification'>Update a verification</h2><h6 id='put-api-v1-account-verifications-id-3'><verb class="put">PUT</verb> /api/v1/<strong>account/verifications/:id</strong></h6><h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>Status of the verification: <a href="#verification-status" available here</a></td>
+</tr>
+<tr>
+<td>method</td>
+<td>string</td>
+<td>How the verification has been processed <code>automatic</code>, <code>manual</code>...</td>
+</tr>
+<tr>
+<td>additional-info</td>
+<td>text</td>
+<td>Attach more details to a verification</td>
+</tr>
+<tr>
+<td>verification-number</td>
+<td>string</td>
+<td>Possible reference of a verification in another system</td>
+</tr>
+<tr>
+<td>verify-token</td>
+<td>string</td>
+<td>Token to compare with the verification token.</td>
+</tr>
+<tr>
+<td>action</td>
+<td>string</td>
+<td><code>refresh</code>, <code>verify</code> actions used in <a href="#validate-a-verification">verification validation</a> or <a href="#refresh-a-verification">refresh token</a></td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+A user can only update a verification if it is granted a <code>verifications.update</code> role.
+</aside>
+<h2 id='remove-a-verification'>Remove a verification</h2><h6 id='delete-api-v1-account-verifications-id'><verb class="delete">DELETE</verb> /api/v1/<strong>account/verifications/:id</strong></h6>
+<p>This endpoint will expire the given verification if verified or cancel it if pending/created.</p>
+
+<aside class="notice">
+A user can only remove its account verifications unless it is granted a <code>verifications.destroy</code> role.
+</aside>
+<h3 id='quot-attachment-quot-based-verification'>&quot;Attachment&quot; based verification</h3>
+<p>For verifications having documents attached, the documents will be deleted if the verification has just been created.
+On the other cases they will remain and flagged to inactive.</p>
+<h1 id='tutor-profiles'>Tutor Profiles</h1>
+<p>User may create a tutor profile on their account. This profile is automatically created when the <code>tutor</code> field
+is enabled in their user account. There is only one tutor profile per user.</p>
+
+<p>Tutory requires a minimum age (16 years old) in order to become a tutor.
+Below this age the user will not be able to update or view its tutor profile.</p>
+<h3 id='cancellation-policies'>Cancellation policies</h3>
+<p>The cancellation policies define the amount refunded when a student cancels its lesson.</p>
+
+<ul>
+<li><code>48_hours_no_refund</code>: No refund if cancellation happens less than 48 hours before a lesson.</li>
+<li><code>24_hours_no_refund</code>: No refund if cancellation happens less than 24 hours before a lesson.</li>
+<li><code>48_hours_partial_refund</code>: Partial refund (<strong>TODO</strong> to be discussed) if cancellation happens less than 48 hours before a lesson.</li>
+<li><code>24_hours_partial_refund</code>: Partial refund (<strong>TODO</strong> to be discussed) if cancellation happens less than 24 hours before a lesson.</li>
+<li><code>full_refund</code>: Full refund when a student cancels its lesson, no matter when.</li>
+</ul>
+<h2 id='get-all-tutor-profiles'>Get all tutor profiles</h2><h6 id='get-api-v1-tutor-profiles'><verb class="get">GET</verb> /api/v1/<strong>tutor-profiles</strong></h6>
+<aside class="notice">
+A user can list tutor profiles if he is granted a <code>tutor-profiles.index</code> role.
+</aside>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>allow-face-to-face-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows face to face classes</td>
+</tr>
+<tr>
+<td>allow-group-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows group classes</td>
+</tr>
+<tr>
+<td>allow-online-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows online classes</td>
+</tr>
+<tr>
+<td>allow-student-home-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows classes at the student home</td>
+</tr>
+<tr>
+<td>allow-tutor-home-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows classes at his home.</td>
+</tr>
+<tr>
+<td>cancellation-policy</td>
+<td>integer</td>
+<td>Defines the cancellation policy of the tutor. <a href="#cancellation-policies">List here.</a></td>
+</tr>
+<tr>
+<td>first-lesson-free</td>
+<td>boolean</td>
+<td><code>false</code> by default, first lesson with this tutor is free</td>
+</tr>
+<tr>
+<td>max-number-of-students</td>
+<td>integer</td>
+<td>Maximum number of students allowed per lesson in a group.</td>
+</tr>
+<tr>
+<td>maximum-distance</td>
+<td>integer</td>
+<td>Maximum distance of a student.</td>
+</tr>
+<tr>
+<td>min-lesson-duration</td>
+<td>integer</td>
+<td>Minimum time required for a lesson (minutes). E.g: 120 (minutes)</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-value</td>
+<td>integer</td>
+<td>Minimum number of lessons per <code>min-lesson-frequency-unit</code>. E.g: 1 (per week)</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-unit</td>
+<td>integer</td>
+<td>Unit of the lesson frequency (week, month, year).</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>datetime</td>
+<td>Date of the tutor profile creation.</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>datetime</td>
+<td>Date of the last tutor profile update.</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>datetime</td>
+<td><code>true</code> if the tutor profile is publicly visible.</td>
+</tr>
+</tbody></table>
+<h3 id='include'>Include</h3>
+<ul>
+<li><code>user</code>: The user attached to the tutor profile (refer to <a href="#get-all-user">users</a>).</li>
+<li><code>profile-translations</code>: The translations attach to the tutor profile 
+(refer to <a href="#get-all-profile-translations">profile translations</a>).</li>
+<li><code>competences</code>: The competences that the tutor is able to teach (refer to <a href="#competences">competences</a>).</li>
+</ul>
+<h3 id='errors'>Errors</h3>
+<ul>
+<li><strong>401</strong> : Permission denied for not allowed users.</li>
+</ul>
+<h2 id='get-a-tutor-profile'>Get a tutor profile</h2><h6 id='get-api-v1-tutor-profiles-id'><verb class="get">GET</verb> /api/v1/<strong>tutor-profiles/:id</strong></h6>
+<aside class="notice">
+A user can only view its profile as well as `visible` tutor profiles, unless he is granted a <code>tutor-profiles.show</code> role.
+</aside>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>allow-face-to-face-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows face to face classes</td>
+</tr>
+<tr>
+<td>allow-group-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows group classes</td>
+</tr>
+<tr>
+<td>allow-online-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows online classes</td>
+</tr>
+<tr>
+<td>allow-student-home-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows classes at the student home</td>
+</tr>
+<tr>
+<td>allow-tutor-home-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows classes at his home.</td>
+</tr>
+<tr>
+<td>cancellation-policy</td>
+<td>integer</td>
+<td>Defines the cancellation policy of the tutor. <a href="#cancellation-policies">List here.</a></td>
+</tr>
+<tr>
+<td>first-lesson-free</td>
+<td>boolean</td>
+<td><code>false</code> by default, first lesson with this tutor is free</td>
+</tr>
+<tr>
+<td>max-number-of-students</td>
+<td>integer</td>
+<td>Maximum number of students allowed per lesson in a group.</td>
+</tr>
+<tr>
+<td>maximum-distance</td>
+<td>integer</td>
+<td>Maximum distance of a student.</td>
+</tr>
+<tr>
+<td>min-lesson-duration</td>
+<td>integer</td>
+<td>Minimum time required for a lesson (minutes). E.g: 120 (minutes)</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-value</td>
+<td>integer</td>
+<td>Minimum number of lessons per <code>min-lesson-frequency-unit</code>. E.g: 1 (per week)</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-unit</td>
+<td>integer</td>
+<td>Unit of the lesson frequency (week, month, year).</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>datetime</td>
+<td>Date of the tutor profile creation.</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>datetime</td>
+<td>Date of the last tutor profile update.</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>datetime</td>
+<td><code>true</code> if the tutor profile is publicly visible.</td>
+</tr>
+</tbody></table>
+<h3 id='include-2'>Include</h3>
+<ul>
+<li><code>user</code>: The user attached to the tutor profile (refer to <a href="#get-all-user">users</a>).</li>
+<li><code>profile-translations</code>: The translations attach to the tutor profile 
+(refer to <a href="#get-all-profile-translations">profile translations</a>).</li>
+<li><code>competences</code>: The competences that the tutor is able to teach (refer to <a href="#competences">competences</a>).</li>
+</ul>
+<h3 id='errors-2'>Errors</h3>
+<ul>
+<li><strong>401</strong> : Permission denied for not allowed users.</li>
+</ul>
+<h2 id='get-my-tutor-profile'>Get my tutor profile</h2><h6 id='get-api-v1-tutor-profiles-me'><verb class="get">GET</verb> /api/v1/<strong>tutor-profiles/me</strong></h6>
+<p>This endpoint can be used to retrieve the tutor&#39;s profile.</p>
+
+<p>It has the same parameters and inclusion as the <a href="#get-a-tutor-profile">Get a tutor profile</a> endpoint.</p>
+<h2 id='create-a-tutor-profile'>Create a tutor profile</h2><h6 id='put-api-v1-users-id'><verb class="put">PUT</verb> /api/v1/<strong>users/:id</strong></h6>
+<p>A tutor profile is automatically associated when the field <code>tutor</code> is enabled in the <a href="#users">user account</a>. </p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>tutor</td>
+<td>boolean</td>
+<td><code>true</code></td>
+</tr>
+</tbody></table>
+<h3 id='errors-3'>Errors</h3>
+<ul>
+<li><strong>731</strong> : The date of birth needs to be known in order to create a tutor profile.</li>
+<li><strong>800</strong> : If the user is too young he won&#39;t be able to create a tutor profile.</li>
+</ul>
+<h2 id='update-a-tutor-profile'>Update a tutor profile</h2><h6 id='put-api-v1-tutor-profiles-id'><verb class="put">PUT</verb> /api/v1/<strong>tutor-profiles/:id</strong></h6>
+<aside class="notice">
+A tutor can only update its profile unless he is granted a <code>tutor-profiles.update</code> role.
+</aside>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>allow-face-to-face-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows face to face classes</td>
+</tr>
+<tr>
+<td>allow-group-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows group classes</td>
+</tr>
+<tr>
+<td>allow-online-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows online classes</td>
+</tr>
+<tr>
+<td>allow-student-home-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows classes at the student home</td>
+</tr>
+<tr>
+<td>allow-tutor-home-classes</td>
+<td>boolean</td>
+<td><code>true</code> if the tutors allows classes at his home.</td>
+</tr>
+<tr>
+<td>cancellation-policy</td>
+<td>integer</td>
+<td>Defines the cancellation policy of the tutor. <a href="#cancellation-policies">List here.</a></td>
+</tr>
+<tr>
+<td>first-lesson-free</td>
+<td>boolean</td>
+<td><code>false</code> by default, first lesson with this tutor is free</td>
+</tr>
+<tr>
+<td>max-number-of-students</td>
+<td>integer</td>
+<td>Maximum number of students allowed per lesson in a group.</td>
+</tr>
+<tr>
+<td>maximum-distance</td>
+<td>integer</td>
+<td>Maximum distance of a student.</td>
+</tr>
+<tr>
+<td>min-lesson-duration</td>
+<td>integer</td>
+<td>Minimum time required for a lesson (minutes). E.g: 120 (minutes)</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-value</td>
+<td>integer</td>
+<td>Minimum number of lessons per <code>min-lesson-frequency-unit</code>. E.g: 1 (per week)</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-unit</td>
+<td>integer</td>
+<td>Unit of the lesson frequency (week, month, year).</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>datetime</td>
+<td><code>true</code> if the tutor profile is publicly visible.</td>
+</tr>
+</tbody></table>
+<h2 id='remove-a-tutor-profile'>Remove a tutor profile</h2><h6 id='delete-api-v1-tutor-profiles-id'><verb class="delete">DELETE</verb> /api/v1/<strong>tutor-profiles/:id</strong></h6>
+<aside class="notice">
+A user can only remove a tutor profile if he is granted a <code>tutor-profiles.destroy</code> role.
+</aside>
+<h1 id='profile-translations'>Profile Translations</h1>
+<p>Users may add many translations of their profile (tutor/student).</p>
+<h2 id='get-all-profile-translations'>Get all profile translations</h2><h6 id='get-api-v1-profile-translations'><verb class="get">GET</verb> /api/v1/<strong>profile-translations</strong></h6>
+<aside class="notice">
+User needs to be granted the <code>profile-translations.index</code> role to call this endpoint.
+</aside>
+
+<p>This endpoint allows to retrieve all the profile translations.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>locale</td>
+<td>string</td>
+<td>The language code of the translation. E.g: &quot;en-AU&quot;.</td>
+</tr>
+<tr>
+<td>headline</td>
+<td>text</td>
+<td>The headline of the profile.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>text</td>
+<td>The description of the profile.</td>
+</tr>
+</tbody></table>
+<h3 id='include'>Include</h3>
+<ul>
+<li><code>tutor-profile</code>: The tutor profile associated to the translation.</li>
+</ul>
+<h2 id='get-a-profile-translation'>Get a profile translation</h2><h6 id='get-api-v1-profile-translations-id'><verb class="get">GET</verb> /api/v1/<strong>profile-translations/:id</strong></h6>
+<p>This endpoint allows to retrieve a specific profile translation.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>locale</td>
+<td>string</td>
+<td>The language code of the translation. E.g: &quot;en-AU&quot;.</td>
+</tr>
+<tr>
+<td>headline</td>
+<td>text</td>
+<td>The headline of the profile.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>text</td>
+<td>The description of the profile.</td>
+</tr>
+</tbody></table>
+<h3 id='include-2'>Include</h3>
+<ul>
+<li><code>tutor-profile</code>: The tutor profile associated to the translation.</li>
+</ul>
+<h2 id='create-a-profile-translation'>Create a profile translation</h2><h6 id='post-api-v1-profile-translations'><verb class="post">POST</verb> /api/v1/<strong>profile-translations</strong></h6><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"profile-translations"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"locale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en-AU"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I'm an enthusiastic tutor! Yeah!"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"tutor-profile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tutor-profiles"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;tutor_profile_id&gt;"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint allows to create a new profile translation associated to a tutor/student profile.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>locale</td>
+<td>string</td>
+<td>yes</td>
+<td>The language code of the translation. E.g: &quot;en-AU&quot;.</td>
+</tr>
+<tr>
+<td>headline</td>
+<td>text</td>
+<td>no</td>
+<td>The headline of the profile.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>text</td>
+<td>no</td>
+<td>The description of the profile.</td>
+</tr>
+</tbody></table>
+<h3 id='errors'>Errors</h3>
+<ul>
+<li><strong>100</strong>: A translation in this language already exists for this profile, update it.</li>
+<li><strong>403</strong>: You are not allowed to create a translation for another user.</li>
+</ul>
+<h2 id='update-a-profile-translation'>Update a profile translation</h2><h6 id='put-api-v1-profile-translations-id'><verb class="put">PUT</verb> /api/v1/<strong>profile-translations/:id</strong></h6>
+<p>This endpoint allows to update a given profile translation.</p>
+
+<aside class="notice">
+User can only update their profile translation or needs to be granted the 
+<code>profile-translations.update</code> role to call this endpoint.
+</aside>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>locale</td>
+<td>string</td>
+<td>The language code of the translation. E.g: &quot;en-AU&quot;.</td>
+</tr>
+<tr>
+<td>headline</td>
+<td>text</td>
+<td>The headline of the profile.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>text</td>
+<td>The description of the profile.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-profile-translation'>Delete a profile translation</h2><h6 id='delete-api-v1-profile-translations-id'><verb class="delete">DELETE</verb> /api/v1/<strong>profile-translations/:id</strong></h6>
+<p>This endpoint allows to delete a given profile translation.</p>
+
+<aside class="notice">
+User can only delete their profile translation or needs to be granted the 
+<code>profile-translations.delete</code> role to call this endpoint.
+</aside>
+<h1 id='competences'>Competences</h1>
+<p>This section is one of the key section to find a tutor on the platform.
+Tutors can add competences to their profile and students can search them.</p>
+<h2 id='search-competences'>Search competences</h2><h6 id='get-api-v1-competences'><verb class="get">GET</verb> /api/v1/<strong>competences</strong></h6>
+<p>This endpoint will return the user&#39;s competences by default.</p>
+<h3 id='parameters'>Parameters</h3>
+<p>Some parameters are also defined in the tutor&#39;s profile. 
+This allow to have a custom behaviour for each competence as well as a general one.</p>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first-lesson-free</td>
+<td>boolean</td>
+<td>true</td>
+<td><code>tutor_profile.first_lesson_free</code> is the one by default, first lesson for this subject is free</td>
+</tr>
+<tr>
+<td>custom-level</td>
+<td>string</td>
+<td>true</td>
+<td>Allows user to define a custom level (e.g: &quot;Black Belt&quot; for judo etc.)</td>
+</tr>
+<tr>
+<td>level</td>
+<td>string</td>
+<td>true</td>
+<td>Allows to get an idea of the tutor&#39;s level for a subject.</td>
+</tr>
+<tr>
+<td>last-subject-update</td>
+<td>date</td>
+<td>true</td>
+<td>Gives the last time the tutor reviewed the details of the subject. It allows to notify tutors when a subject changes.</td>
+</tr>
+<tr>
+<td>min-lesson-duration</td>
+<td>integer</td>
+<td>false</td>
+<td>Gives the minimum duration of a lesson.</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-unit</td>
+<td>string</td>
+<td>false</td>
+<td>Gives the unit of the lesson frequency (month, week...)</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-value</td>
+<td>integer</td>
+<td>false</td>
+<td>Gives the value of the lesson frequency (1,3,4 times)</td>
+</tr>
+<tr>
+<td>subject-id</td>
+<td>integer</td>
+<td>true</td>
+<td>The unique identifier of a subject on tutory-tree.</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>datetime</td>
+<td>false</td>
+<td>Date of the competence&#39;s creation.</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>datetime</td>
+<td>false</td>
+<td>Date of the last competence&#39;s update.</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>datetime</td>
+<td>true</td>
+<td><code>true</code> if the competence is publicly visible. The tutor will be able to access it even if it&#39;s set to not visible.</td>
+</tr>
+</tbody></table>
+<h3 id='filters'>Filters</h3>
+<p>The parameters marked by <code>true</code> in the filter column can be used. Filters can be combined to get more specific results.</p>
+<h4 id='modified-filter-behaviour'>Modified filter behaviour</h4>
+<ul>
+<li><code>subject-id</code>: Filter the list of ids of subjects of interest (separated by comas). </li>
+</ul>
+
+<p>By default the competences of the tutor are selected. </p>
+
+<p>Administrators granted by the <code>competences.search</code> role can use the <code>all</code> value to get all the subjects.</p>
+
+<p>E.g: <strong>filter[subject-id]</strong>=125,128</p>
+<h4 id='additional-filters'>Additional filters</h4>
+<p>Additional filters have been added:</p>
+
+<ul>
+<li><code>distance</code>: <code>&lt;distance&gt;,&lt;latitude&gt;,&lt;longitude&gt;</code> - Filter the competences taught in a given area (1km - 20km radius)</li>
+</ul>
+
+<p>E.g: <strong>filter[distance]</strong>=10,-33.9490543,151.2557003 </p>
+
+<p>This will return the competences taught within 10 kilometers from Maroubra Beach as well as other 
+competences taught further away but with the possibility of coming to the user&#39;s home or online.</p>
+
+<ul>
+<li><code>class-type</code>: Filter the type of classes offered for teaching this competence. 
+
+<ul>
+<li><code>elsewhere</code>: Competence that can be taught face to face anywhere.</li>
+<li><code>group</code>: Competence that can be taught to a group.</li>
+<li><code>online</code>: Competence that can be taught online.</li>
+<li><code>student-home</code>: Competence that can be taught at the student&#39;s home.</li>
+<li><code>tutor-home</code>: Competence that can be taught at the tutor&#39;s home.</li>
+</ul></li>
+</ul>
+
+<p>E.g: <strong>filter[class-type]</strong>=student-home,online </p>
+
+<p>This will return the competences that are taught at the student home or online.</p>
+<h3 id='sorting'>Sorting</h3>
+<p>This is setup by default.
+* <code>tutor_profile.address.distance</code>: Sort by the distance separating the user from the tutor (closest to furthest).</p>
+<h3 id='include'>Include</h3>
+<aside class="warning">
+At the moment, there is a bug when `include=user,tutor-profile`. 
+Make sure you include tutor-profile first: `include=tutor-profile,user`.
+</aside>
+
+<ul>
+<li><code>tutor-profile</code>: Include the tutor-profile associated to that competence</li>
+<li><code>user</code>: Get the user through the tutor-profile association.</li>
+<li><code>price-listings</code>: Get the different price listings associated.</li>
+<li><code>price-listing-defaults</code>: Get the different defaults price listings included in the price listing set (if any).</li>
+<li><code>price-listing-set</code>: Get the set of price listings attached to the tutor profile.</li>
+</ul>
+<h2 id='get-a-competence'>Get a competence</h2><h6 id='get-api-v1-competences-id'><verb class="get">GET</verb> /api/v1/<strong>competences/:id</strong></h6>
+<p>This endpoint will return the competence requested.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<p>Some parameters are also defined in the tutor&#39;s profile. 
+This allow to have a custom behaviour for each competence as well as a general one.</p>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first-lesson-free</td>
+<td>boolean</td>
+<td>true</td>
+<td><code>tutor_profile.first_lesson_free</code> is the one by default, first lesson for this subject is free</td>
+</tr>
+<tr>
+<td>custom-level</td>
+<td>string</td>
+<td>true</td>
+<td>Allows user to define a custom level (e.g: &quot;Black Belt&quot; for judo etc.)</td>
+</tr>
+<tr>
+<td>level</td>
+<td>string</td>
+<td>true</td>
+<td>Allows to get an idea of the tutor&#39;s level for a subject.</td>
+</tr>
+<tr>
+<td>last-subject-update</td>
+<td>date</td>
+<td>true</td>
+<td>Gives the last time the tutor reviewed the details of the subject. It allows to notify tutors when a subject changes.</td>
+</tr>
+<tr>
+<td>min-lesson-duration</td>
+<td>integer</td>
+<td>false</td>
+<td>Gives the minimum duration of a lesson.</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-unit</td>
+<td>string</td>
+<td>false</td>
+<td>Gives the unit of the lesson frequency (month, week...)</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-value</td>
+<td>integer</td>
+<td>false</td>
+<td>Gives the value of the lesson frequency (1,3,4 times)</td>
+</tr>
+<tr>
+<td>subject-id</td>
+<td>integer</td>
+<td>true</td>
+<td>The unique identifier of a subject on tutory-tree.</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>datetime</td>
+<td>false</td>
+<td>Date of the competence&#39;s creation.</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>datetime</td>
+<td>false</td>
+<td>Date of the last competence&#39;s update.</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>datetime</td>
+<td>true</td>
+<td><code>true</code> if the competence is publicly visible. The tutor will be able to access it even if it&#39;s set to not visible.</td>
+</tr>
+</tbody></table>
+<h3 id='include-2'>Include</h3>
+<aside class="warning">
+At the moment, there is a bug when `include=user,tutor-profile`. 
+Make sure you include the tutor-profile first if you request the user too: `include=tutor-profile,user`.
+</aside>
+
+<ul>
+<li><code>tutor-profile</code>: Include the tutor-profile associated to that competence</li>
+<li><code>user</code>: Get the user through the tutor-profile association.</li>
+<li><code>price-listings</code>: Get the different price listings associated.</li>
+<li><code>price-listing-defaults</code>: Get the different defaults price listings included in the price listing set (if any).</li>
+<li><code>price-listing-set</code>: Get the set of price listings attached to the tutor profile.</li>
+</ul>
+<h2 id='create-a-competence'>Create a competence</h2><h6 id='post-api-v1-competences'><verb class="post">POST</verb> /api/v1/<strong>competences</strong></h6>
+<p>Use this endpoint to add a new competence to the tutor profile.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<p>Some parameters are also defined in the tutor&#39;s profile. 
+This allow to have a custom behaviour for each competence as well as a general one.</p>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first-lesson-free</td>
+<td>boolean</td>
+<td><code>tutor_profile.first_lesson_free</code> is the one by default, first lesson for this subject is free</td>
+</tr>
+<tr>
+<td>custom-level</td>
+<td>string</td>
+<td>Allows user to define a custom level (e.g: &quot;Black Belt&quot; for judo etc.)</td>
+</tr>
+<tr>
+<td>level</td>
+<td>string</td>
+<td>Allows to get an idea of the tutor&#39;s level for a subject.</td>
+</tr>
+<tr>
+<td>min-lesson-duration</td>
+<td>integer</td>
+<td>Gives the minimum duration of a lesson.</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-unit</td>
+<td>string</td>
+<td>Gives the unit of the lesson frequency (month, week...)</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-value</td>
+<td>integer</td>
+<td>Gives the value of the lesson frequency (1,3,4 times)</td>
+</tr>
+<tr>
+<td>subject-id</td>
+<td>integer</td>
+<td>The unique identifier of a subject on tutory-tree.</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>datetime</td>
+<td><code>true</code> if the competence is publicly visible. The tutor will be able to access it even if it&#39;s set to not visible.</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-competence'>Update a competence</h2><h6 id='put-api-v1-competences-id'><verb class="put">PUT</verb> /api/v1/<strong>competences/:id</strong></h6>
+<aside class="notice">
+A user can only remove one of his competence unless he is granted a <code>competences.update</code> role.
+</aside>
+<h3 id='parameters-4'>Parameters</h3>
+<p>Some parameters are also defined in the tutor&#39;s profile. 
+This allow to have a custom behaviour for each competence as well as a general one.</p>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first-lesson-free</td>
+<td>boolean</td>
+<td><code>tutor_profile.first_lesson_free</code> is the one by default, first lesson for this subject is free</td>
+</tr>
+<tr>
+<td>custom-level</td>
+<td>string</td>
+<td>Allows user to define a custom level (e.g: &quot;Black Belt&quot; for judo etc.)</td>
+</tr>
+<tr>
+<td>level</td>
+<td>string</td>
+<td>Allows to get an idea of the tutor&#39;s level for a subject.</td>
+</tr>
+<tr>
+<td>min-lesson-duration</td>
+<td>integer</td>
+<td>Gives the minimum duration of a lesson.</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-unit</td>
+<td>string</td>
+<td>Gives the unit of the lesson frequency (month, week...)</td>
+</tr>
+<tr>
+<td>min-lesson-frequency-value</td>
+<td>integer</td>
+<td>Gives the value of the lesson frequency (1,3,4 times)</td>
+</tr>
+<tr>
+<td>subject-id</td>
+<td>integer</td>
+<td>The unique identifier of a subject on tutory-tree.</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>datetime</td>
+<td><code>true</code> if the competence is publicly visible. The tutor will be able to access it even if it&#39;s set to not visible.</td>
+</tr>
+</tbody></table>
+<h2 id='remove-a-competence'>Remove a competence</h2><h6 id='delete-api-v1-competences-id'><verb class="delete">DELETE</verb> /api/v1/<strong>competences/:id</strong></h6>
+<aside class="notice">
+A user can only remove one of his competence unless he is granted a <code>competences.destroy</code> role.
+</aside>
+<h1 id='price-listings'>Price Listings</h1>
+<p>Price listings can be customized by competences or can be set by default by being associated to the tutor profile.</p>
+<h3 id='price-listings-categories'>Price listings categories</h3>
+<p>There are a number of different price listings categories available to the tutor. 
+He can decides to give discounts when a student book a large number of hours.</p>
+
+<ul>
+<li>standard: Standard rate for a x of hours</li>
+<li>pack_x_hours: Price for x hours of classes.</li>
+<li>x_hours_a_week: Price for x hours of lesson a week.</li>
+<li>x_hours_a_month: Price for x hours of lesson a month.</li>
+</ul>
+<h2 id='get-all-price-listings'>Get all price listings</h2><h6 id='get-api-v1-price-listings'><verb class="get">GET</verb> /api/v1/<strong>price-listings</strong></h6>
+<aside class="notice">
+This endpoint is limited to administrator granted of the <code>price-listings.index</code> role.
+</aside>
+
+<p>This endpoint returns all the price listings.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>amount-home-lesson</td>
+<td>float</td>
+<td>Price requested by the tutor for a lesson at his home.</td>
+</tr>
+<tr>
+<td>amount-travel-lesson</td>
+<td>float</td>
+<td>Price requested by the tutor for a lesson &quot;outside&quot;.</td>
+</tr>
+<tr>
+<td>amount-per-extra-student</td>
+<td>float</td>
+<td>Price per extra student during grouped lessons.</td>
+</tr>
+<tr>
+<td>amount_web_lesson</td>
+<td>float</td>
+<td>Price of a lesson given online.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>integer</td>
+<td>One of the <a href='#price-listings-categories'>price-listing categories</a> specified.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>The currency of the price listing.</td>
+</tr>
+<tr>
+<td>length</td>
+<td>float</td>
+<td>The time (hours) for this price listing.</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>datetime</td>
+<td>Date of the price listing&#39;s creation.</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>datetime</td>
+<td>Date of the last price listing&#39;s update.</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-price-listing'>Get a price listing</h2><h6 id='get-api-v1-price-listings-id'><verb class="get">GET</verb> /api/v1/<strong>price-listings/:id</strong></h6>
+<p>Ths endpoint returns a particular price listing.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>amount-home-lesson</td>
+<td>float</td>
+<td>Price requested by the tutor for a lesson at his home.</td>
+</tr>
+<tr>
+<td>amount-travel-lesson</td>
+<td>float</td>
+<td>Price requested by the tutor for a lesson &quot;outside&quot;.</td>
+</tr>
+<tr>
+<td>amount-per-extra-student</td>
+<td>float</td>
+<td>Price per extra student during grouped lessons.</td>
+</tr>
+<tr>
+<td>amount_web_lesson</td>
+<td>float</td>
+<td>Price of a lesson given online.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>integer</td>
+<td>One of the <a href='#price-listings-categories'>price-listing categories</a> specified.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>The currency of the price listing.</td>
+</tr>
+<tr>
+<td>length</td>
+<td>float</td>
+<td>The time (hours) for this price listing.</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>datetime</td>
+<td>Date of the price listing&#39;s creation.</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>datetime</td>
+<td>Date of the last price listing&#39;s update.</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-price-listing'>Create a price listing</h2><h6 id='post-api-v1-price-listings'><verb class="post">POST</verb> /api/v1/<strong>price-listings</strong></h6>
+<p>This endpoint adds a new price listing to a competence or to a price listing set (one or the other is required).</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>amount-home-lesson</td>
+<td>float</td>
+<td>false</td>
+<td>Price requested by the tutor for a lesson at his home.</td>
+</tr>
+<tr>
+<td>amount-travel-lesson</td>
+<td>float</td>
+<td>false</td>
+<td>Price requested by the tutor for a lesson &quot;outside&quot;.</td>
+</tr>
+<tr>
+<td>amount-per-extra-student</td>
+<td>float</td>
+<td>false</td>
+<td>Price per extra student during grouped lessons.</td>
+</tr>
+<tr>
+<td>amount_web_lesson</td>
+<td>float</td>
+<td>false</td>
+<td>Price of a lesson given online.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>integer</td>
+<td>true</td>
+<td>One of the <a href='#price-listings-categories'>price-listing categories</a> specified.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>true</td>
+<td>The currency of the price listing.</td>
+</tr>
+<tr>
+<td>length</td>
+<td>float</td>
+<td>false</td>
+<td>The time (hours) for this price listing.</td>
+</tr>
+</tbody></table>
+<h3 id='association'>Association</h3>
+<p>To create a new price-listing, you must associate it to an existing <a href="#competences">competence</a> or price-listing-set (not both).</p>
+<h2 id='update-a-price-listing'>Update a price listing</h2><h6 id='put-api-v1-price-listings-id'><verb class="put">PUT</verb> /api/v1/<strong>price-listings/:id</strong></h6>
+<p>This endpoint allows to update a given price listing. </p>
+
+<aside class="notice">
+Users can only update their own price listings, unless they are granted a <code>price-listings.update</code> role.
+</aside>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>amount-home-lesson</td>
+<td>float</td>
+<td>false</td>
+<td>Price requested by the tutor for a lesson at his home.</td>
+</tr>
+<tr>
+<td>amount-travel-lesson</td>
+<td>float</td>
+<td>false</td>
+<td>Price requested by the tutor for a lesson &quot;outside&quot;.</td>
+</tr>
+<tr>
+<td>amount-per-extra-student</td>
+<td>float</td>
+<td>false</td>
+<td>Price per extra student during grouped lessons.</td>
+</tr>
+<tr>
+<td>amount_web_lesson</td>
+<td>float</td>
+<td>false</td>
+<td>Price of a lesson given online.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>integer</td>
+<td>true</td>
+<td>One of the <a href='#price-listings-categories'>price-listing categories</a> specified.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>true</td>
+<td>The currency of the price listing.</td>
+</tr>
+<tr>
+<td>length</td>
+<td>float</td>
+<td>false</td>
+<td>The time (hours) for this price listing.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-price-listing'>Delete a price listing</h2><h6 id='delete-api-v1-price-listings-id'><verb class="delete">DELETE</verb> /api/v1/<strong>price-listings/:id</strong></h6>
+<p>This endpoint allows to delete a given price listing. </p>
+
+<aside class="notice">
+Users can only delete their own price listings, unless they are granted a <code>price-listings.destroy</code> role.
+</aside>
+<h1 id='price-listing-sets'>Price Listing Sets</h1>
+<p>This entity allows to group several price listings.</p>
+<h2 id='get-all-price-listing-sets'>Get all price listing sets</h2><h6 id='get-api-v1-price-listing-sets'><verb class="get">GET</verb> /api/v1/<strong>price-listing-sets</strong></h6>
+<aside class="notice">
+This endpoint is limited to administrator granted of the <code>price-listing-sets.index</code> role.
+</aside>
+
+<p>This endpoint returns all the price listing sets.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name given to the price listing set.</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>datetime</td>
+<td>Date of the price listing set&#39;s creation.</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>datetime</td>
+<td>Date of the last price listing set&#39;s update.</td>
+</tr>
+</tbody></table>
+<h3 id='include'>Include</h3>
+<ul>
+<li><code>price-listings</code>: All the <a href="#price-listings">price listings</a> included in the price listing set.</li>
+<li><code>tutor-profile</code>: The <a href="#tutor-profiles">tutor profile</a> associated to the price listing set.</li>
+</ul>
+<h2 id='get-a-price-listing-set'>Get a price listing set</h2><h6 id='get-api-v1-price-listing-sets-id'><verb class="get">GET</verb> /api/v1/<strong>price-listing-sets/:id</strong></h6>
+<p>Ths endpoint returns a particular price listing.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name given to the price listing set.</td>
+</tr>
+<tr>
+<td>created-at</td>
+<td>datetime</td>
+<td>Date of the price listing set&#39;s creation.</td>
+</tr>
+<tr>
+<td>updated-at</td>
+<td>datetime</td>
+<td>Date of the last price listing set&#39;s update.</td>
+</tr>
+</tbody></table>
+<h3 id='include-2'>Include</h3>
+<ul>
+<li><code>price-listings</code>: All the <a href="#price-listings">price listings</a> included in this price listing set.</li>
+<li><code>tutor-profile</code>: The <a href="#tutor-profiles">tutor profile</a> associated to this price listing set.</li>
+</ul>
+<h2 id='create-a-price-listing-set'>Create a price listing set</h2><h6 id='post-api-v1-price-listing-sets'><verb class="post">POST</verb> /api/v1/<strong>price-listing-sets</strong></h6>
+<p>This endpoint adds a new price listing to a competence or to a price listing set (one or the other is required).</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name given to the price listing set.</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-price-listing-set'>Update a price listing set</h2><h6 id='put-api-v1-price-listing-sets-id'><verb class="put">PUT</verb> /api/v1/<strong>price-listing-sets/:id</strong></h6>
+<p>This endpoint allows to update a given price listing set. </p>
+
+<aside class="notice">
+Users can only update their own price listing sets, unless they are granted a <code>price-listing-sets.update</code> role.
+</aside>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name given to the price listing set.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-price-listing-set'>Delete a price listing set</h2><h6 id='delete-api-v1-price-listing-sets-id'><verb class="delete">DELETE</verb> /api/v1/<strong>price-listing-sets/:id</strong></h6>
+<p>This endpoint allows to delete a given price listing set. </p>
+
+<aside class="notice">
+Users can only delete their own price listing sets, unless they are granted a <code>price-listing-sets.destroy</code> role.
+</aside>
+<h1 id='general'>General</h1><h2 id='time-zones'>Time zones</h2>
+<p>Time zones are represented by friendly names that map to <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_tz_database_time_zones">tz database names</a>. 
+For example, an API request returns &quot;Eastern Time (US &amp; Canada)&quot; instead of &quot;America/New_York&quot;. 
+You can map the friendly names to the tz database names by referencing the Constants &gt; Mapping 
+section of the Ruby on Rails <a target="_blank" href="http://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html">TimeZone object doc</a>.</p>
+<h2 id='phone-number'>Phone Number</h2>
+<p>The phone number should comply with the E.164 international telephone numbering plan. </p>
+
+<p>Example +1 555-123-4567. E164 numbers are international numbers with a country dial prefix, 
+usually an area code and a subscriber number.</p>
+
+<p>A valid E.164 phone number must include a country calling code.</p>
+<h2 id='country-code'>Country code</h2>
+<p>Tutory uses the <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166-1</a> country codes standard to name countries and ISO 3166-2 subdivisions. </p>
+
+<p>Example </p>
+
+<table><thead>
+<tr>
+<th>English name</th>
+<th>Alpha-2 code</th>
+<th>Alpha-3 code</th>
+<th>Numeric code</th>
+<th>Subdivision code (ISO_3166-2)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Australia</td>
+<td>AU</td>
+<td>AUS</td>
+<td>036</td>
+<td>ISO_3166-2:AU</td>
+</tr>
+<tr>
+<td>France</td>
+<td>FR</td>
+<td>FRA</td>
+<td>250</td>
+<td>ISO 3166-2:FR</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Subdivision name (en)</th>
+<th>Subdivision category</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>AU-NSW</td>
+<td>New South Wales</td>
+<td>state</td>
+</tr>
+<tr>
+<td>AU-VIC</td>
+<td>Victoria</td>
+<td>state</td>
+</tr>
+<tr>
+<td>AU-ACT</td>
+<td>Australian Capital Territory</td>
+<td>territory</td>
+</tr>
+<tr>
+<td>FR-NOR</td>
+<td>Normandie</td>
+<td>region</td>
+</tr>
+<tr>
+<td>FR-IDF</td>
+<td>Île-de-France</td>
+<td>region</td>
+</tr>
+</tbody></table>
+<h2 id='gender-code'>Gender code</h2>
+<p>Tutory follows the vCard4 standard as it has the most up to date, modern, and inclusive notion of &quot;gender&quot;.</p>
+
+<ul>
+<li>F = female,</li>
+<li>M = male,</li>
+<li>O = other,</li>
+<li>N = none or not applicable,</li>
+<li>U = unknown</li>
+</ul>
+<h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
