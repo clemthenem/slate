@@ -1,6 +1,10 @@
 # Users
 
-The users in Tutory are managed using different roles. 
+The users in Tutory represent tutors and students.
+Their permissions are managed using **Roles**. 
+
+
+List of endpoints:
 
 * GET /api/v1/users
 * GET /api/v1/users/me
